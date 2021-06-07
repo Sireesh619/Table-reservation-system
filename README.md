@@ -1,0 +1,3 @@
+# Table-reservation-system
+
+This project is about the website which is created to make sure that the customers work will be made easier. The website will give the customer the access to sign in or sign up(new customers) into the portal where the “VS Café ”. The customer also can book his/her reservation with the accompanying members to book a table with the specified time of their time. By doing this the customer is making sure on what is available, what he/she is planning on eating in the restaurant. The server is being changed with a buffer time of five minutes if needed to make sure the happiness of the customer. So presenting to you, the website of our restaurant, any suggestions is always welcome…and ENJOY!!!
