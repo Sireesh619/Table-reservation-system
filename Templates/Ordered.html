@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<form action="/Registered" method = "GET">
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <!-- Your Columns HERE -->
+            <h2>Register History</h2>
+
+            <th scope="col">Reservation ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Contact No.</th>
+            <th scope="col">No. of Seats</th>
+            <th scope="col">Time</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+    {% for column in register %}
+        <!-- Your rows inside the table HERE: -->
+            <tr>
+                <td>{{column.0}}</td>
+                <td>{{column.1}}</td>
+                <td>{{column.2}}</td>
+                <td>{{column.3}}</td>
+                <td>{{column.4}}</td>
+
+            </tr>
+
+    </tbody>
+     {% endfor %}
+
+</table>
+</form>
+<div class="text-center">
+
+    </div>
+<style>
+    .box{
+    text-align:center;
+    }
+</style>
+
+{% endblock %}

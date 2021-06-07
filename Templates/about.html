@@ -1,0 +1,90 @@
+{% extends 'base.html'%}
+{% block content %}
+<h1>About Us</h1>
+
+<div class="mem"><img src="{{url_for('static', filename='propic.jpeg')}}" alt="profile picture"><h2>Venkatesh R</h2>
+    <p>Student at SRM University <br><b>Experience with OpenCV & Flask</br>Contact:+91 7907017606</br>Email:rvenkatesh2401@gmail.com</p>
+</div>
+<div class="mem"><img src="{{url_for('static', filename='sireesh.jfif')}}" alt="profile picture"><h2>Sireesh J</h2>
+  <p>Student at SRM University <br> <b>Experience with PHP</br> Contact:+91 9841722102</br>Email:sireesh619@gmail.com</p>
+</div>
+
+  <form action="{{ url_for('about') }}" method="post">
+      <p></br></p><h5><b>Contact us</b></h5>
+
+
+    <input type="text" id="fname" name="fname" placeholder="Your name..">
+
+
+    <input type="text" id="lname" name="lname" placeholder="Your last name..">
+
+
+    <select id="country" name="country">
+      <option>India</option>
+      <option>Dubai</option>
+      <option>USA</option>
+    </select>
+
+
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+
+  </form>
+{{msg}}
+
+<style>
+div.mem {
+    display: inline-block;
+
+
+     /* or absolute */
+
+  left: 50%;
+    vertical-align:top;
+
+  border: 2px solid #a0464694;
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  transition:all 0.5s,ease,0.5s;
+  text-align: left;
+  justify-content:center;
+  align-self:center;
+
+}
+img{
+    width: 100px;
+    border-radius: 50px;
+
+}
+div.mem:hover{
+    background-color:#a0464694;
+    transform: scale(1.05);
+
+
+div.continer{
+text-align:left;}
+}
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+</style>
+{% endblock %}

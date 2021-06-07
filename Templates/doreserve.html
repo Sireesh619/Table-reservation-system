@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <h3 class="word">Reservation</h3>
+             </div></br></br></br>
+            <h5 class="word">
+                <form action="{{ url_for('reserve') }}" method="post">
+                  <div class="msg">{{ msg }}</div>
+                    <input id="name" name="name" type="text" placeholder="Enter Your Name" class="textbox"/></br></br>
+                    <input id="contactno" name="contactno" type="text" placeholder="Enter Your Contact No." class="textbox"/></br></br>
+                    <input id="seats" name="seats" type="text" placeholder="No. of Seats" class="textbox"/></br></br>
+                    <input type="datetime-local" id="time" name="time"  placeholder="Time" /></br></br>
+
+                    <input type="submit" class="btn btn-dark" value="Register"></br>
+                </form>
+            </h5>
+            <p class="bottom">You have aldready booked your table?  <a class="bottom" href="{{url_for('Ordered')}}">Click here</a></p>
+          </div>
+        </div>
+{% endblock %}

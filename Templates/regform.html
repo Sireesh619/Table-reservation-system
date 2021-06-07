@@ -1,0 +1,25 @@
+{% extends 'signin.html'%}
+{% block content %}
+
+   <div class="card">
+   <div class="card-header">
+   <h2>Register</h2>
+      </div>
+      <div class="col-sm-12">
+   <p>Username <input type = "text" name = "Username" /></p>
+   <p>Password<input type="password" name = "Password" /></p>
+   <p>ContactNo<input type="number" name = "ContactNo" /></p>
+   <p>Email<input type="email" name = "Email" /></p>
+   <p>Address<input type= "text" name = "Address" /></p>
+   <p>City<input type = "text" name = "City" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+      </div>
+</div>
+
+<style>
+
+input{
+text-align:center!important;
+}
+</style>
+{% endblock %}
