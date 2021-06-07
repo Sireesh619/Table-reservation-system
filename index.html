@@ -1,0 +1,28 @@
+
+{% extends 'base.html'%}
+
+{% block content %}
+        <div align="center">
+          <div align="top" class="border">
+             <div class="">
+                <h1 class=""></h1>
+             </div></br></br></br>
+                <h1 class="bottom">
+                   <em> Hi <b>{{session.username}}</b>!!</br></br> Welcome to </br></br>VS-CAFE...</em>
+                </h1></br></br></br>
+
+          </div>
+        </div>
+<style>
+
+      .border{
+
+                padding: 8px 1px;
+                width: 600px;
+                height: 400px;
+                border: 1px solid #236B8E;
+                border-radius: 0px;
+                background-color: #22ff2fad;}
+</style>
+
+{% endblock %}

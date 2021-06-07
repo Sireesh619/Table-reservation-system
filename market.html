@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<form action="/menu" method = "POST">
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <!-- Your Columns HERE -->
+            <h2>MENU</h2>
+
+            <th scope="col">Cat</th>
+            <th scope="col">Itemid</th>
+            <th scope="col">Itemname</th>
+
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for row in menu %}
+        <!-- Your rows inside the table HERE: -->
+            <tr>
+                <td>{{row.0}}</td>
+                <td>{{row.1}}</td>
+                <td>{{row.2}}</td>
+
+                <td>{{row.3}}</td>
+                <td>₹{{row.4}}</td>
+
+
+                <td>
+                    <input class="box" type="number" name = "Quantity" />
+
+
+                </td>
+            </tr>
+
+    </tbody>
+     {% endfor %}
+
+</table>
+</form>
+<div class="text-center">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+<style>
+    .box{
+    text-align:center;
+    }
+</style>
+
+{% endblock %}
